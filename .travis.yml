@@ -16,9 +16,9 @@ after_success:
 #Login to docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     - docker push ravindrapatade/multi-client
-    - docker ravindrapatade/multi-nginx
-    - docker ravindrapatade/multi-server
-    - docker ravindrapatade/multi-worker
+    - docker push ravindrapatade/multi-nginx
+    - docker push ravindrapatade/multi-server
+    - docker push ravindrapatade/multi-worker
 
 
 
