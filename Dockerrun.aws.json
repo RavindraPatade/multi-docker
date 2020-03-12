@@ -1,5 +1,5 @@
 {
-    "AWSEBDOckerrunVersion": 2,
+    "AWSEBDockerrunVersion": 2 ,
     "containerDefinations": [
         {
             "name": "client",
@@ -22,7 +22,7 @@
         {
             "name": "nginx",
             "image": "ravindrapatade/multi-nginx",
-            "hostname": "worker", 
+            "hostname": "nginx", 
             "essential": true,
             "portMapings": [
                 {
