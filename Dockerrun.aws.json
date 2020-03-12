@@ -1,0 +1,36 @@
+{
+    "AWSEBDOckerrunVersion": 2,
+    "containerDefinations": [
+        {
+            "name": "client",
+            "image": "ravindrapatade/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "ravindrapatade/multi-server",
+            "hostname": "api",
+            "essential": false  
+        },
+        {
+            "name": "worker",
+            "image": "ravindrapatade/multi-worker",
+            "hostname": "worker", 
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "ravindrapatade/multi-nginx",
+            "hostname": "worker", 
+            "essential": true,
+            "portMapings": [
+                {
+                    "hostPort":80,
+                    "containerPort":80
+                }
+            ],
+            "links":["client","server"]
+        }
+    ]
+}
